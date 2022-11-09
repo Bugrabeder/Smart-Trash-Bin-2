@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - iotdustbin</title>
+    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function getDatas() {
+            $.get("https://iotdustbin.com/api/Veriler", function (data, status) {
+                $('#doluluk').text('%'+ data[0]['doluluk']);
+                $('#sicaklik').text(data[0]['sicaklik'] + '°');
+                $('#atesdurumu').text(data[0]['atesdurumu']);
+                $('#sigaradurumu').text(data[0]['gazdurumu']);
+
+            });
+        }
+        function getfanhızlı() {
+            $.get("https://iotdustbin.com/api/Veriler/postfanhizli", function (data, status) {
+                alert("Fan hızlı kademede çalışacaktır.");
+            });
+        }
+        function getfanorta() {
+            $.get("https://iotdustbin.com/api/Veriler/postfanorta", function (data, status) {
+                alert("Fan orta kademede çalışacaktır.");
+            });
+        }
+        function getfanyavas() {
+            $.get("https://iotdustbin.com/api/Veriler/postfanyavas", function (data, status) {
+                alert("Fan yavas kademede çalışacaktır.");
+            });
+        }
+        function getfankapat() {
+            $.get("https://iotdustbin.com/api/Veriler/postfankapat", function (data, status) {
+                alert("Fan kapatıldı.");
+            });
+        }
+        function getbuzzercalıstır() {
+            $.get("https://iotdustbin.com/api/Veriler/buzzercalistir", function (data, status) {
+                alert("Buzzer çalışıyor.");
+            });
+        }
+        function getbuzzerkapat() {
+            $.get("https://iotdustbin.com/api/Veriler/buzzerkapat", function (data, status) {
+                alert("Buzzer kapatıldı.");
+            });
+        }
+        function getkapakkapat() {
+            $.get("https://iotdustbin.com/api/Veriler/kapakkapat", function (data, status) {
+                alert("Kapak kapatıldı");
+            });
+        }
+        function getkapakac() {
+            $.get("https://iotdustbin.com/api/Veriler/kapakac", function (data, status) {
+                alert("Kapak açıldı.");
+            });
+        }
+        function getmailgonder() {
+            $.get("https://iotdustbin.com/api/Veriler/mailgonder", function (data, status) {
+                alert("Sensör verileri mailinize gönderildi.");
+            });
+        }
+        
+
+    </script>
+</head>
+<body onload="getDatas()">
+    
+    <div class="container">
+        @RenderBody()
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - iotdustbin - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/jquery.js"></script>
+    <script src="~/js/site.js"></script>    
+    @await RenderSectionAsync("Scripts", required: false)
+    
+</body>
+</html>

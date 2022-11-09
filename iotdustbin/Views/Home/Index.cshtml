@@ -1,0 +1,47 @@
+﻿@model IEnumerable<veriler>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="row" style="padding-top:20px;">
+        <div class="col col-md-4 box " style="width: 25%; ">
+            <div class="row display-6">Doluluk Değeri</div>
+            <label class="row display-6 text-center" style="padding: 30px;margin:20px; color: red" id="doluluk"></label>
+        </div>
+        <div class="col col-md-4 box " style="width: 25%; ">
+            <div class="row display-6 text-center">Sıcaklık Değeri</div>
+            <label class="row display-6 text-center" style="padding: 30px;margin:20px; color: red" id="sicaklik"></label>
+        </div>
+        <div class="col col-md-4 box " style="width: 25%; ">
+            <div class="row display-6">Ateş Durumu</div>
+            <label class="row display-6 text-center" style="padding: 30px;margin:20px; color: red" id="atesdurumu"></label>
+        </div>
+        <div class="col col-md-4 box " style="width: 25%;">
+            <div class="row display-6">Duman Durumu</div>
+            <label class="row display-6 text-md-center" style="padding: 30px; margin:20px; color: red" id="sigaradurumu"></label>
+        </div>
+    </div>
+    <div class="row ">
+        <div class="col col-md-2 box" style="width: 20%;">
+            <div class="row display-6" style="text-align: center;">Fan Çalıştırma Modları</div>
+            <div class="row mx-auto " style="margin-bottom: 10px ;">
+                <button onclick="getfanhızlı()" class=" col-md-12 btn-success btns mt-2">Hızlı</button>
+                <button onclick="getfanorta()" class=" col-md-12 btn-success btns mt-2">Orta</button>
+                <button onclick="getfanyavas()" class=" col-md-12 btn-success btns mt-2">Yavaş</button>
+                <button onclick="getfankapat()" class=" col-md-12 btn-success btns mt-2">Kapat</button>
+            </div>
+        </div>
+        <div class="col col-md-2 " style="width: 20%;">
+            <button onclick="getkapakac()" class=" col-sm-6 btn-success btns mt-2" style="margin-bottom: 5px; margin-left: 70px;">Kapak Ac</button>
+            <button onclick="getkapakkapat()" class=" col-sm-6 btn-success btns mt-2" style="margin-bottom: 5px; margin-left: 70px;">Kapak Kapat</button>
+        </div>
+        <div class="col col-md-2" style="width: 20%;">
+            <button onclick="getmailgonder()" class=" col-sm-6 btn-success btns mt-2" style="margin-bottom: 5px; margin-left: 70px;">Mail Gönder</button>
+        </div>
+        <div class="col col-md-2" style="width: 20%;">
+            <button onclick="getbuzzercalıstır()" class=" col-sm-6 btn-success btns mt-2" style="margin-bottom: 5px; margin-left: 70px;">Buzzer Çalıştır</button>
+            <button onclick="getbuzzerkapat()" class=" col-sm-6 btn-success btns mt-2" style="margin-bottom: 5px; margin-left: 70px;">Buzzer Kapat</button>
+        </div>
+    </div>
+</div>

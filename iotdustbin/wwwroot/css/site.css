@@ -1,0 +1,62 @@
+﻿
+.row1 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.navbar23 {
+    width: auto;
+    height: auto;
+    margin: 50px;
+}
+
+.navbaritem {
+    font: 30px black;
+    margin: 0px 20px;
+    text-decoration: none;
+}
+
+.solidity {
+    font: 30px black;
+    margin-top: 20px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box {
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.18);
+}
+
+.row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.col {
+    flex: auto !important;
+}
+
+.btns {
+    color: black;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: transparent;
+    box-shadow: 1px 1px 20px;
+}
+.label1{
+    padding-top: 50px;
+    margin: 20px;
+}
+.kutu{
+    width:100px;
+    padding:20px;
+    border:20px solid;
+    margin:20px;
+}
